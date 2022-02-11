@@ -1,0 +1,136 @@
+<html>
+<head>
+	<script>
+		function dis(val)
+		{
+			document.getElementById("ans").value+=val;
+		}
+		function solution()
+		{
+			let data= document.getElementById("ans").value;
+			let result = eval(data);
+			document.getElementById("ans").value = result;
+		}
+		function clr()
+		{
+			document.getElementById("ans").value = "";
+		}
+	</script>
+	<style>
+		.title{
+		margin-bottom: 10px;
+		text-align:center;
+		width: 200px;
+		color:rgb(187, 187, 187);
+		border: solid rgb(155, 136, 136) 2px;
+		}
+
+		input[type="button"]
+		{
+		background-color:rgb(38, 40, 41);
+		color: rgb(255, 255, 255);
+		border: solid rgb(179, 178, 178) 2px;
+		width:70px;
+        height: 30px;
+		}
+		
+		input[type="reset"]
+		{
+		background-color:rgb(224, 79, 11);
+		color: rgb(255, 255, 255);
+		border: solid rgb(179, 178, 178) 2px;
+		width:70px;
+        height: 30px;
+		
+        
+
+       
+		}
+
+		input[type="text"]
+		{
+		background-color:white;
+		border: solid rgb(180, 179, 179) 2px;
+		width:300px;
+        height: 50px;
+        font-size: xx-large;
+		}
+        table{
+            border-spacing: 20px;
+            background-color: rgb(68, 61, 61);
+            height: 500px;
+            width: 500px;
+			margin-left:auto;
+			margin-right: auto;
+			margin-top: 30px;
+			
+         
+        }
+        tr{
+            height: 40px;
+            width: 29px;
+            word-spacing: 30px;
+        }
+        input,td{
+            border-style: none;
+            font-size: 25px;
+          
+        }
+		div
+		{
+			font-size: xx-large;
+			margin-right: auto;
+			margin-left: 650px;
+			color:#545464;
+		}
+        
+      
+	</style>
+</head>
+<body>
+	<div>CALCULATOR</div>
+
+	<table border="15">
+        <tr>
+			<td><img src="../img/images.jpg" style="width: 80px;height: 20px;"></td>
+		<tr>
+			<td colspan="3.5" ><input type="text" id="ans"/></td>
+		
+			<td ><input type ="reset" value="C" onclick="clr()"/> </td>                                    
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="dis('7')"/> </td>
+			<td><input type="button" value="8" onclick="dis('8')"/> </td>
+			<td><input type="button" value="9" onclick="dis('9')"/> </td>
+			<td><input type="button" value="/" onclick="dis('/')"/> </td>
+            <td><input type="button" value="(" onclick="dis('(')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="dis('4')"/> </td>
+			<td><input type="button" value="5" onclick="dis('5')"/> </td>
+			<td><input type="button" value="6" onclick="dis('6')"/> </td>
+			<td><input type="button" value="-" onclick="dis('-')"/> </td>
+            <td><input type="button" value=")" onclick="dis(')')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" onclick="dis('1')"/> </td>
+			<td><input type="button" value="2" onclick="dis('2')"/> </td>
+			<td><input type="button" value="3" onclick="dis('3')"/> </td>
+			<td><input type="button" value="+" onclick="dis('+')"/> </td>
+            <td><input type="button" value="%" onclick="dis('%')"/> </td>
+            
+		</tr>
+		<tr>
+            <td><input type="button" value="00" onclick="dis('00')"/> </td>
+			<td><input type="button" value="." onclick="dis('.')"/> </td>
+			<td><input type="button" value="0" onclick="dis('0')"/> </td>
+		
+			<td><input type="button" value="*" onclick="dis('*')"/> </td>
+           
+            <td><input type="button" value="=" onclick="solution()"/> </td>
+		</tr>
+      
+
+	</table>
+</body>
+</html>
